@@ -1,0 +1,89 @@
+/* Custom styles and animations for Bé Luyện Toán Lớp 2 */
+body {
+    font-family: 'Fredoka', cursive, sans-serif;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Bounce animation for success icon */
+@keyframes bounce-gentle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.animate-bounce-gentle {
+    animation: bounce-gentle 1.5s infinite ease-in-out;
+}
+
+/* Card tap/active feedback */
+.card-hover:active {
+    transform: scale(0.97);
+}
+
+const verticalMathCSS = `
+.vertical-math-card {
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 20px 30px;
+    border: 2px solid #333;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.column-math {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.operator-sign {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.2rem;
+    color: #007bff;
+}
+
+.numbers-block {
+    text-align: right;
+    letter-spacing: 4px;
+}
+
+.num-row {
+    line-height: 1.4;
+}
+
+.math-line {
+    border-bottom: 3px solid #333;
+    margin: 8px 0 12px 0;
+    width: 100%;
+}
+
+.answer-row {
+    text-align: right;
+}
+
+.column-answer-input {
+    width: 90px;
+    font-size: 2rem;
+    font-family: inherit;
+    font-weight: bold;
+    text-align: right;
+    letter-spacing: 4px;
+    border: 2px dashed #007bff;
+    border-radius: 6px;
+    padding: 4px 8px;
+    outline: none;
+}
+
+.column-answer-input:focus {
+    border-color: #28a745;
+    background-color: #e8f8ec;
+}
+`;
